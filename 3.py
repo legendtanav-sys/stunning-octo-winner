@@ -1,16 +1,13 @@
-#create class
-class Parrot:
-    #class attribute
-    species = "bird"
-    # instance attribute
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# create class
+class pair_elements:
+    def twosum(self, nums, target):
+        #create an empty dictionary
+        lookup = {}
+        #ITERATE THROUGH THE TUPLE!!!
+        for i, num in enumerate(nums):
+            if target - num in lookup:
+                return(lookup[target - num], i)
+            lookup[num] = i
 
-        #institiate the parrot class
-        blu = Parrot("blu", 10)
-        woo = Parrot("woo", 15)
-
-#access class  attributes
-print("blu is a {} ".format("blu species"))
-print("woo is also a {} ".format("woo species"))
+value = int(input("Enter sum for which you wanna make:"))
+print("Index1=%d, Index2=%d", pair_elements().twosum(10,20,30,40,50,60,70),value)
